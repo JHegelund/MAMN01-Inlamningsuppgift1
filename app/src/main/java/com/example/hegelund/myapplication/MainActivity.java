@@ -4,13 +4,54 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.content.Intent;
+import android.view.View;
 
 public class MainActivity extends ActionBarActivity {
+
+    private Button btn;
+    private Button btn2;
+    private Button btn3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        btn = (Button) findViewById(R.id.button1);
+
+        btn.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Byta activity
+                Intent i = new Intent(MainActivity.this, Main2Activity.class);
+                startActivity(i);
+                // slut byta activity
+            }
+        });
+
+        btn2 = (Button) findViewById(R.id.button2);
+
+        btn2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Byta activity
+                Intent i = new Intent(MainActivity.this, Main22Activity.class);
+                startActivity(i);
+                // slut byta activity
+            }
+        });
+
+        btn3 = (Button) findViewById(R.id.button3);
+
+        btn3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Byta activity
+                Intent i = new Intent(MainActivity.this, Main23Activity.class);
+                startActivity(i);
+                // slut byta activity
+            }
+        });
+
     }
 
     @Override
